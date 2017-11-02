@@ -2,8 +2,13 @@ form {
   margin: 10px;
 }
 
+.App-header h2 {
+  line-height: 70px;
+}
+
 .App-header {
   background-color: #222;
   height: 70px;
   color: white;
+  text-align: center;
 }

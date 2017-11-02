@@ -39,6 +39,7 @@ const TodosList = (props) => {
         columns={columns}
         sortable="true"
         defaultPageSize="10"
+        className="text-center"
       />
     </div>
   );
