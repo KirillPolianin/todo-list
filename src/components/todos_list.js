@@ -37,8 +37,8 @@ const TodosList = (props) => {
       <ReactTable
         data={props.todos}
         columns={columns}
-        sortable="true"
-        defaultPageSize="10"
+        sortable={true}
+        defaultPageSize={10}
         className="text-center"
       />
     </div>
