@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import AddTodoForm from './add_todo_form';
 import TodosList from './todos_list';
-
 import './App.css';
 
 class TodoPage extends Component {
@@ -23,8 +22,11 @@ class TodoPage extends Component {
   render() {
     return (
       <div>
-      <AddTodoForm onFormSubmit={todo => this.addTodo(todo)} />
-      <TodosList todos={this.state.todos} />
+        <div className="App-header">
+          <h2 className="">Simple Todolist</h2>
+        </div>
+        <AddTodoForm onFormSubmit={todo => this.addTodo(todo)} />
+        <TodosList todos={this.state.todos} />
       </div>
     );
   }

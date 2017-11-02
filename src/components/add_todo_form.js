@@ -28,14 +28,19 @@ class AddTodoForm extends Component {
   render() {
     return (
       <form onSubmit={this.onInputSubmit}>
-        <fieldset>
-          <legend>Add todo:</legend>
-          <label htmlFor="description">Description: </label>
-          <input type="text" id="description" name="description" value={this.state.description} onChange={this.onInputChange} required />
-          <label htmlFor="date">Date: </label>
-          <input type="text" id="date" name="date" value={this.state.date} onChange={this.onInputChange} required />
-          <input type="submit" value="Add" />
-        </fieldset>
+        <div className="form-inline justify-content-center">
+          <div className="form-group">
+            <label htmlFor="description">Description: </label>
+            <input type="text" id="description" className="form-control" name="description" value={this.state.description} onChange={this.onInputChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="date">Date: </label>
+            <input type="text" id="date" className="form-control" name="date" value={this.state.date} onChange={this.onInputChange} required />
+          </div>
+          <div>
+            <button type="submit" className="btn btn-primary">Add</button>
+          </div>
+        </div>
       </form>
     );
   }
