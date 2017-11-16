@@ -19,6 +19,12 @@ class TodoPage extends Component {
     });
   }
 
+  deleteTodo = index => {
+    this.setState({
+      todos: this.state.todos.filter((_, i) => i !== index)
+    });
+  };
+
   render() {
     return (
       <div>
@@ -26,10 +32,10 @@ class TodoPage extends Component {
           <h2 className="">Simple Todolist</h2>
         </div>
         <AddTodoForm onFormSubmit={todo => this.addTodo(todo)} />
-        <TodosList todos={this.state.todos} />
+        <TodosList todos={this.state.todos} deleteTodo={this.deleteTodo} />
       </div>
     );
   }
-};
+}
 
 export default TodoPage;

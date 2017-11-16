@@ -30,11 +30,11 @@ class AddTodoForm extends Component {
       <form onSubmit={this.onInputSubmit}>
         <div className="form-inline justify-content-center">
           <div className="form-group">
-            <label htmlFor="description">Description: </label>
+            <label htmlFor="description">Description:<pre> </pre></label>
             <input type="text" id="description" className="form-control mb-2 mr-sm-2 mb-sm-0" name="description" value={this.state.description} onChange={this.onInputChange} required />
           </div>
           <div className="form-group">
-            <label htmlFor="date">Date: </label>
+            <label htmlFor="date">Date:<pre> </pre></label>
             <input type="text" id="date" className="form-control mb-2 mr-sm-2 mb-sm-0" name="date" value={this.state.date} onChange={this.onInputChange} required />
           </div>
           <button type="submit" className="btn btn-primary">Add</button>
